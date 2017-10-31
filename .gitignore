@@ -2,4 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-.Rmd
+index.Rmd
+.Rproj
+.gitignore
