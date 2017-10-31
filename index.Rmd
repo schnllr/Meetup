@@ -4,7 +4,7 @@ subtitle: "Mastering Corporate Design with R"
 author: "Andrea Schnell, 7. November 2017"
 output:
   xaringan::moon_reader:
-    css: testzh.css
+    css: libs/testzh.css
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -153,7 +153,7 @@ class: left, top
 
 File > New File > R Markdown > From Template
 
-![](RMarkdown_Templates.PNG)
+![](libs/RMarkdown_Templates.PNG)
 
 ---
 
