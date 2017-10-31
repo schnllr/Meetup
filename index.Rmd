@@ -165,4 +165,4 @@ File > New File > R Markdown > From Template
 [Creating a basic template package in R](http://ismayc.github.io/ecots2k16/template_pkg/) 
 
 - This presentation  
-[RMeetup: Mastering Corporate Desing with R](L:\STAT\03_AS\01_Werkzeuge\02_Utilities)  
+[RMeetup: Mastering Corporate Desing with R](https://schnllr.github.io/Meetup/)  
