@@ -20,6 +20,11 @@ h3 {
   color:  #009ee0;
 }
 
+.bullets {
+    display: inline-block;
+  line-height: 2em;
+  padding-top: 2em;
+}
 
 
 a, a > code {
