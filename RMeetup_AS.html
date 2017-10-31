@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>  RMeetup @ STATISTIK ZH</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Andrea Schnell, 7. November 2017" />
+    <link rel="stylesheet" href="testzh.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# <br> RMeetup @ STATISTIK ZH
+## Mastering Corporate Design with R
+### Andrea Schnell, 7. November 2017
+
+---
+
+
+
+
+
+
+
+
+class: top, left
+
+# Starting Point
+
+Establish a workflow and publication process, that is
+
+- traceable
+
+- reproducible
+
+- allows publication of high quality charts and maps
+
+- in accordance to our corporate design
+
+
+
+---
+
+
+class: inverse2
+
+# Why
+
+- asdf
+- asdf
+
+bliblablub
+
+---
+
+
+class: left, top
+
+# Tools
+
+### «Standing on the shoulders of giants»
+
+.center[
+&lt;IMG SRC="http://hexb.in/hexagons/rstudio.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/rmarkdown.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/knitr.png" width = "150" height = auto&gt;
+&lt;IMG SRC="https://i.stack.imgur.com/zHFFO.png" width = auto height = "150"&gt;]
+
+
+---
+
+class: left, top
+
+# YAML Header
+
+### That's where you define your output
+
+```r
+---
+title: "Publication Title"
+author: "Name Last Name"
+*output:
+*  pdf_document:
+    latex_engine: xelatex
+    dev: cairo_pdf
+documentclass: article
+fontsize: 12pt
+classoption: a4paper
+geometry: left=3.5cm, right=1.65cm, top=1.8cm, bottom=1.8cm
+---
+```
+
+???
+
+That is where the music plays. In the yaml header you define your output type, pdf, html, word, whatever, make all the necessary adjusmtents here. 
+
+---
+
+class: left, top
+
+# Customize Output
+
+### within YAML: header-includes
+
+```r
+---
+header-includes:
+  \usepackage{xcolor}
+  \definecolor{zhblue}{RGB}{0,158,224}
+  \usepackage{fontspec}
+  \setmainfont[BoldFont = {Arial Black}]{Arial}
+---
+```
+
+### my_template.tex
+
+```r
+---
+pdf_document:
+template: my_template.tex
+---
+```
+
+
+???
+Probably you may want do make adjustments to the default .tex layout. like font, colors, title page etc. 2 ways of doing this: 
+- in the header-includes: you can do the tex-adjustments, loading packages, define colors etc.
+- you create you own my_template.tex and overwrite rmarkdowns default .tex file 
+
+
+---
+
+class: left, top
+
+
+# Build &lt;font color=#E45466&gt;statRmd&lt;/font&gt;  package
+
+###  Why build a package?
+
+
+- Code organization  
+- Consisten documentation  
+- Code distribution  
+- it has become pretty easy to do, thanks to   
+
+.center[
+&lt;IMG SRC="http://hexb.in/hexagons/devtools.png" width = "100" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/roxygen2.png" width = "100" height = auto&gt;]
+
+- possibility of templates
+
+
+---
+
+class: left, top
+
+
+# Load template from &lt;font color=#E45466&gt;statRmd&lt;/font&gt; package
+
+
+File &gt; New File &gt; R Markdown &gt; From Template
+
+![](RMarkdown_Templates.PNG)
+
+---
+
+# Resources
+
+- _Google is you Friend_
+
+- Tutorial from Chester Ismay  
+[Creating a basic template package in R](http://ismayc.github.io/ecots2k16/template_pkg/) 
+
+- This presentation  
+[RMeetup: Mastering Corporate Desing with R](L:\STAT\03_AS\01_Werkzeuge\02_Utilities)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"self_contained": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

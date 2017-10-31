@@ -1,0 +1,168 @@
+---
+title:  "<br> RMeetup @ STATISTIK ZH"
+subtitle: "Mastering Corporate Design with R"
+author: "Andrea Schnell, 7. November 2017"
+output:
+  xaringan::moon_reader:
+    css: testzh.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      self_contained: false
+      
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+
+
+class: top, left
+
+# Starting Point
+
+Establish a workflow and publication process, that is
+
+- traceable
+
+- reproducible
+
+- allows publication of high quality charts and maps
+
+- in accordance to our corporate design
+
+
+
+---
+
+
+class: inverse2
+
+# Why
+
+- asdf
+- asdf
+
+bliblablub
+
+---
+
+
+class: left, top
+
+# Tools
+
+### «Standing on the shoulders of giants»
+
+.center[
+<IMG SRC="http://hexb.in/hexagons/rstudio.png" width = "150" height = auto><IMG SRC="http://hexb.in/hexagons/rmarkdown.png" width = "150" height = auto><IMG SRC="http://hexb.in/hexagons/knitr.png" width = "150" height = auto>
+<IMG SRC="https://i.stack.imgur.com/zHFFO.png" width = auto height = "150">]
+
+
+---
+
+class: left, top
+
+# YAML Header
+
+### That's where you define your output
+```{r, eval = F, echo = T}
+---
+title: "Publication Title"
+author: "Name Last Name"
+*output:
+*  pdf_document:
+    latex_engine: xelatex
+    dev: cairo_pdf
+documentclass: article
+fontsize: 12pt
+classoption: a4paper
+geometry: left=3.5cm, right=1.65cm, top=1.8cm, bottom=1.8cm
+---
+```
+
+???
+
+That is where the music plays. In the yaml header you define your output type, pdf, html, word, whatever, make all the necessary adjusmtents here. 
+
+---
+
+class: left, top
+
+# Customize Output
+
+### within YAML: header-includes
+```{r, eval = F, echo = T}
+---
+header-includes:
+  \usepackage{xcolor}
+  \definecolor{zhblue}{RGB}{0,158,224}
+  \usepackage{fontspec}
+  \setmainfont[BoldFont = {Arial Black}]{Arial}
+---
+```
+
+### my_template.tex
+```{r, eval = F, echo = T}
+---
+pdf_document:
+template: my_template.tex
+---
+```
+
+
+???
+Probably you may want do make adjustments to the default .tex layout. like font, colors, title page etc. 2 ways of doing this: 
+- in the header-includes: you can do the tex-adjustments, loading packages, define colors etc.
+- you create you own my_template.tex and overwrite rmarkdowns default .tex file 
+
+
+---
+
+class: left, top
+
+
+# Build <font color=#E45466>statRmd</font>  package
+
+###  Why build a package?
+
+
+- Code organization  
+- Consisten documentation  
+- Code distribution  
+- it has become pretty easy to do, thanks to   
+
+.center[
+<IMG SRC="http://hexb.in/hexagons/devtools.png" width = "100" height = auto><IMG SRC="http://hexb.in/hexagons/roxygen2.png" width = "100" height = auto>]
+
+- possibility of templates
+
+
+---
+
+class: left, top
+
+
+# Load template from <font color=#E45466>statRmd</font> package
+
+
+File > New File > R Markdown > From Template
+
+![](RMarkdown_Templates.PNG)
+
+---
+
+# Resources
+
+- _Google is you Friend_
+
+- Tutorial from Chester Ismay  
+[Creating a basic template package in R](http://ismayc.github.io/ecots2k16/template_pkg/) 
+
+- This presentation  
+[RMeetup: Mastering Corporate Desing with R](L:\STAT\03_AS\01_Werkzeuge\02_Utilities)  
