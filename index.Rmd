@@ -174,26 +174,17 @@ File > New File > R Markdown > From Template
 - Tutorial from Chester Ismay  
 [Creating a basic template package in R](http://ismayc.github.io/ecots2k16/template_pkg/) 
 
-- This presentation  
-[RMeetup: Mastering Corporate Desing with R](https://schnllr.github.io/Meetup/)  
+
 
 
 ---
 
+# Keep in touch
 
+- This presentation  
+[RMeetup: Mastering Corporate Desing with R](https://schnllr.github.io/Meetup/)  
 
-### We are recruiting: German language skills required, R is a plus
+- [https://statistik.zh.ch](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/aktuell/mitteilungen/2017/jobs2017.html)
 
-- Leiter/in Fach- und Koordinationsstelle OGD
-
-- Data Managerin / Data Manager
-
-- Web-Applikationsentwickler/-in mit Zusatzfunktion Business Analyse
-
-
-### Keep in touch
-
-[https://statistik.zh.ch](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/aktuell/mitteilungen/2017/jobs2017.html)
-
-<a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"> @statistik_zh</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+- <a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"> @statistik_zh</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
