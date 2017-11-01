@@ -5,35 +5,52 @@
 
 
 
-body { font-family: 'Lucida Console', 'Source Code Pro', 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif; 
-  font-size: 120% ;
+body { font-family: 'helvetica','Lucida Console', 'Source Code Pro', 'Droid Serif', 'Palatino Linotype';
+    font-size: 18pt;
+    font-weight: normal;
+    color: black;
 }
 
-h1, h2 {
-  font-family: 'Yanone Kaffeesatz';
+h1 {
+  font-family:'helvetica', 'Yanone Kaffeesatz';
+  font-weight: bold;
+  font-size: 36pt;
+}
+
+h2 {
+  font-family:'helvetica', 'Yanone Kaffeesatz';
   font-weight: normal;
+  font-size: 30pt;
 }
 
 h3 {
-  font-family: 'Yanone Kaffeesatz';
+  font-family: 'helvetica','Yanone Kaffeesatz';
   font-weight: normal;
   color:  #009ee0;
+  font-size: 22pt;
 }
 
-.bullets {
+bullets {font-family: 'helvetica','Lucida Console';
     display: inline-block;
-  line-height: 2em;
-  padding-top: 2em;
+    line-height: 2em;
+    padding-top: 2em;
+    font-size: 25pt;
+    font-weight: normal;
+    color: black;
 }
 
 
 a, a > code {
   color: #009ee0;
   text-decoration: none;
+  font-size: 16pt;
 }
 
 .remark-slide-content { 
-  padding: 50px}
+  padding: 50px;
+  line-height: 1.25em;
+  font-size: 18pt;
+}
  
 
 
@@ -64,7 +81,7 @@ a, a > code {
 .inverse {
   background-color: #009ee0;
   color: white;
-  text-shadow: 0 0 20px #333;
+  text-shadow: 0 0 10px #333;
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
@@ -76,9 +93,9 @@ a, a > code {
 
 
 .title-slide {
-  background-image: url("spickel2.PNG");
-  background-position: top left;
-  background-size: contain;
+  background-image: url("sticker-01.png");
+  background-position: top right;
+  background-size: 40%;
   background-color: white;
   color: #009ee0;
   
@@ -92,24 +109,24 @@ a, a > code {
 .title-slide h1 {
   color: #009ee0;  
   text-shadow: none;
-  line-height: 1em;
-  text-align: right;
-  margin-top: 1900px;
-  padding-top: 2em;
+  line-height: 2em;
+  text-align: left;
+  margin-top: 2500px;
+  padding-top: 2.5em;
 }
 
 .title-slide h2 {
   color: #009ee0; 
   text-shadow: none;
-  line-height: 0.5em;
-  text-align: right;
+  line-height: 1em;
+  text-align: left;
 }
 
 .title-slide h3:nth-of-type(1), .title-slide h3:nth-of-type(2) {
   color: #8CBFDD; 
   text-shadow: none;
-  line-height: 0.3em;
-  text-align: right;
+  line-height: 1.1em;
+  text-align: left;
 }
 
 .title-slide .remark-slide-number {

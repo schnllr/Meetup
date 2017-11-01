@@ -1,7 +1,7 @@
 ---
-title:  "<br> RMeetup @ STATISTIK ZH"
+title:  "<br> RMeetup"
 subtitle: "Mastering Corporate Design with R"
-author: "Andrea Schnell, 7. November 2017"
+author: "Andrea Schnell<br>  7. November 2017"
 output:
   xaringan::moon_reader:
     css: libs/testzh.css
@@ -19,44 +19,146 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
+class: inverse, center, middle
 
+# theme_stat()
 
-
-class: top, left
-
-# Starting Point
-
-Establish a workflow and publication process, that is
-
-- traceable
-
-- reproducible
-
-- allows publication of high quality charts and maps
-
-- in accordance to our corporate design
+## <br>a theme for ggplot2 graphics
 
 
 
 ---
 
+class:top left
 
-class: inverse2
+# Graphics with <font color=#009ee0>theme_stat()</font>
 
-# Why
+```{r, eval = T, echo = F, include = F}
+library(ggplot2)
+library(statRmd)
+library(dplyr)
+library(formatR)
+library(gridExtra)
+source("L:/STAT/03_AS/01_Werkzeuge/01_Toolbox/R/Funktionen/theme_stat_tex.r")
+source("L:/STAT/03_AS/01_Werkzeuge/01_Toolbox/R/Funktionen/theme_stat.r")
+```
 
-- asdf
 
-- asdf
+.pull-left[
+```{r, eval = F, echo = T, fig.height=5, fig.width=7, fig.align='center'}
 
-bliblablub this is why
+ggplot(mtcars, 
+       aes(x = factor(cyl), 
+           fill = factor(cyl)))+
+geom_bar(width = 0.7)
+
+
+
+```
+<br>
+```{r, eval = T, echo = F, fig.height=4.55, fig.width=5, fig.align='center'}
+
+ggplot(mtcars, 
+       aes(x = factor(cyl),
+           fill = factor(cyl)))+
+geom_bar(width = 0.7)
+
+```
+
+]
+
+--
+
+.pull-right[
+```{r, eval = F, echo = T, tidy=T, tidy.opts=list(blank=FALSE, width.cutoff=30)}
+
+ggplot(mtcars, 
+       aes(x = factor(cyl),
+           fill = factor(cyl)))+
+geom_bar()+
+*theme_stat()+
+
+```
+
+```{r, eval = T, echo = F, fig.height=4.5, fig.width=5, fig.align='center'}
+
+ggplot(mtcars, aes(x = factor(cyl), 
+                   fill = factor(cyl)))+
+geom_bar(width = 0.7)+
+theme_stat_tex()+
+scale_fill_manual(values = zhpal$zhdiagonal, name = NULL)+
+labs(y = NULL, x = NULL)
+
+```
+]
+
+
+
+---
+
+class: inverse, center, middle
+
+# package statRmd
+
+## <br>Create PDF Documents with RMarkdown according to CD Guidelines
+
+---
+
+class: left, top
+
+
+# Our Analytical Publications
+
+.center[
+.pull-left[
+<IMG SRC=libs/titel_statistikinfo.PNG width = "250" height = auto>
+<IMG SRC=libs/report.PNG width = "250" height = auto>
+]
+
+.pull-right[.left[
+<br>
+- PDF publications (mainly online)
+
+- Blogs
+
+- Short reports
+
+- Periodic reports]
+]]
+
+---
+
+
+
+
+class: top, left
+
+# Starting Point: Why?
+
+### Current state
+- Analysis in various .r files
+- Produce graphics with R and save as .png
+- Include .png in Word
+- Publish Word as PDF
+
+--
+
+### Goal
+Establish an analysis and publication workflow, that
+- is based on RMarkdown, and therefore is
+  - traceable
+  - «reproducible»
+- allows publication of high quality charts and maps
+- isin accordance to our corporate design
+
+
 
 ---
 
 
 class: left, top
 
-# Tools
+# Tools: How?
 
 ### «Standing on the shoulders of giants»
 
@@ -65,6 +167,10 @@ class: left, top
 <IMG SRC="https://i.stack.imgur.com/zHFFO.png" width = auto height = "150">]
 
 
+
+
+???
+set up a RMarkdown file in RStudio render it with some tex-compiler through kniter and get the pdf. How can you custommize your pdf output? -> YAML header
 ---
 
 class: left, top
@@ -87,8 +193,8 @@ geometry: left=3.5cm, right=1.65cm, top=1.8cm, bottom=1.8cm
 ---
 ```
 
-???
 
+???
 That is where the music plays. In the yaml header you define your output type, pdf, html, word, whatever, make all the necessary adjusmtents here. 
 
 ---
@@ -128,7 +234,7 @@ Probably you may want do make adjustments to the default .tex layout. like font,
 class: left, top
 
 
-# Build <font color=#E45466>statRmd</font>  package
+# Build <font color=#009ee0>statRmd</font>  package
 
 ###  Why build a package?
 
@@ -144,7 +250,7 @@ class: left, top
 <!-- .center[ -->
 <!-- <IMG SRC="http://hexb.in/hexagons/devtools.png" width = "100" height = auto><IMG SRC="http://hexb.in/hexagons/roxygen2.png" width = "100" height = auto>] -->
 
-- possibility of templates
+- Enables template functionality
 
 ### Content
 
@@ -158,7 +264,7 @@ class: left, top
 class: left, top
 
 
-# Load template from <font color=#E45466>statRmd</font> package
+# Load Template from <font color=#009ee0>statRmd</font>
 
 
 File > New File > R Markdown > From Template
@@ -166,6 +272,7 @@ File > New File > R Markdown > From Template
 ![](libs/RMarkdown_Templates.PNG)
 
 ---
+
 
 # Resources
 
@@ -176,15 +283,22 @@ File > New File > R Markdown > From Template
 
 
 
-
 ---
+background-image: url("libs/sticker-01.png")
+background-position: bottom right
+background-size:30%
 
 # Keep in touch
 
-- This presentation  
+This presentation  
 [RMeetup: Mastering Corporate Desing with R](https://schnllr.github.io/Meetup/)  
 
-- [https://statistik.zh.ch](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/aktuell/mitteilungen/2017/jobs2017.html)
+https://gist.github.com/statistik_zh
 
-- <a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"> @statistik_zh</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+[https://statistik.zh.ch](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/aktuell/mitteilungen/2017/jobs2017.html)
 
+<a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">@statistik_zh</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<!-- .right[<IMG SRC="libs/sticker-01.png" width = auto height = "150">] -->

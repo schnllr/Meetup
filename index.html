@@ -1,63 +1,137 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>  RMeetup @ STATISTIK ZH</title>
+    <title>  RMeetup</title>
     <meta charset="utf-8">
-    <meta name="author" content="Andrea Schnell, 7. November 2017" />
+    <meta name="author" content="Andrea Schnell  7. November 2017" />
     <link rel="stylesheet" href="libs\testzh.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# <br> RMeetup @ STATISTIK ZH
+# <br> RMeetup
 ## Mastering Corporate Design with R
-### Andrea Schnell, 7. November 2017
+### Andrea Schnell<br> 7. November 2017
 
 ---
 
 
 
 
+
+class: inverse, center, middle
+
+# theme_stat()
+
+## &lt;br&gt;a theme for ggplot2 graphics
+
+
+
+---
+
+class:top left
+
+# Graphics with &lt;font color=#009ee0&gt;theme_stat()&lt;/font&gt;
+
+
+
+
+.pull-left[
+
+```r
+ggplot(mtcars, 
+       aes(x = factor(cyl), 
+           fill = factor(cyl)))+
+geom_bar(width = 0.7)
+```
+&lt;br&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+
+]
+
+--
+
+.pull-right[
+
+```r
+ggplot(mtcars, 
+       aes(x = factor(cyl),
+           fill = factor(cyl)))+
+geom_bar()+
+*theme_stat()+
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+
+
+---
+
+class: inverse, center, middle
+
+# package statRmd
+
+## &lt;br&gt;Create PDF Documents with RMarkdown according to CD Guidelines
+
+---
+
+class: left, top
+
+
+# Our Analytical Publications
+
+.center[
+.pull-left[
+&lt;IMG SRC=libs/titel_statistikinfo.PNG width = "250" height = auto&gt;
+&lt;IMG SRC=libs/report.PNG width = "250" height = auto&gt;
+]
+
+.pull-right[.left[
+&lt;br&gt;
+- PDF publications (mainly online)
+
+- Blogs
+
+- Short reports
+
+- Periodic reports]
+]]
+
+---
 
 
 
 
 class: top, left
 
-# Starting Point
+# Starting Point: Why?
 
-Establish a workflow and publication process, that is
+### Current state
+- Analysis in various .r files
+- Produce graphics with R and save as .png
+- Include .png in Word
+- Publish Word as PDF
 
-- traceable
+--
 
-- reproducible
-
+### Goal
+Establish an analysis and publication workflow, that
+- is based on RMarkdown, and therefore is
+  - traceable
+  - «reproducible»
 - allows publication of high quality charts and maps
-
-- in accordance to our corporate design
-
+- isin accordance to our corporate design
 
 
----
-
-
-class: inverse2
-
-# Why
-
-- asdf
-
-- asdf
-
-bliblablub this is why
 
 ---
 
 
 class: left, top
 
-# Tools
+# Tools: How?
 
 ### «Standing on the shoulders of giants»
 
@@ -66,6 +140,10 @@ class: left, top
 &lt;IMG SRC="https://i.stack.imgur.com/zHFFO.png" width = auto height = "150"&gt;]
 
 
+
+
+???
+set up a RMarkdown file in RStudio render it with some tex-compiler through kniter and get the pdf. How can you custommize your pdf output? -&gt; YAML header
 ---
 
 class: left, top
@@ -89,8 +167,8 @@ geometry: left=3.5cm, right=1.65cm, top=1.8cm, bottom=1.8cm
 ---
 ```
 
-???
 
+???
 That is where the music plays. In the yaml header you define your output type, pdf, html, word, whatever, make all the necessary adjusmtents here. 
 
 ---
@@ -132,7 +210,7 @@ Probably you may want do make adjustments to the default .tex layout. like font,
 class: left, top
 
 
-# Build &lt;font color=#E45466&gt;statRmd&lt;/font&gt;  package
+# Build &lt;font color=#009ee0&gt;statRmd&lt;/font&gt;  package
 
 ###  Why build a package?
 
@@ -148,7 +226,7 @@ class: left, top
 &lt;!-- .center[ --&gt;
 &lt;!-- &lt;IMG SRC="http://hexb.in/hexagons/devtools.png" width = "100" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/roxygen2.png" width = "100" height = auto&gt;] --&gt;
 
-- possibility of templates
+- Enables template functionality
 
 ### Content
 
@@ -162,7 +240,7 @@ class: left, top
 class: left, top
 
 
-# Load template from &lt;font color=#E45466&gt;statRmd&lt;/font&gt; package
+# Load Template from &lt;font color=#009ee0&gt;statRmd&lt;/font&gt;
 
 
 File &gt; New File &gt; R Markdown &gt; From Template
@@ -170,6 +248,7 @@ File &gt; New File &gt; R Markdown &gt; From Template
 ![](libs/RMarkdown_Templates.PNG)
 
 ---
+
 
 # Resources
 
@@ -180,17 +259,25 @@ File &gt; New File &gt; R Markdown &gt; From Template
 
 
 
-
 ---
+background-image: url("libs/sticker-01.png")
+background-position: bottom right
+background-size:30%
 
 # Keep in touch
 
-- This presentation  
+This presentation  
 [RMeetup: Mastering Corporate Desing with R](https://schnllr.github.io/Meetup/)  
 
-- [https://statistik.zh.ch](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/aktuell/mitteilungen/2017/jobs2017.html)
+https://gist.github.com/statistik_zh
 
-- &lt;a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"&gt; @statistik_zh&lt;/a&gt;&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+[https://statistik.zh.ch](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/aktuell/mitteilungen/2017/jobs2017.html)
+
+&lt;a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"&gt;@statistik_zh&lt;/a&gt;&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+
+
+&lt;!-- .right[&lt;IMG SRC="libs/sticker-01.png" width = auto height = "150"&gt;] --&gt;
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
