@@ -20,6 +20,25 @@ class: center, middle, inverse, title-slide
 
 
 
+
+class: inverse, left, middle
+
+# Corporate Design
+
+.large[
+- xlsx export functions
+
+- color palettes
+
+- ggplot2 theme
+
+- RMarkdown pdf templates
+]
+
+
+---
+
+
 class: inverse, center, middle
 
 # theme_stat()
@@ -59,7 +78,7 @@ ggplot(mtcars,
        aes(x = factor(cyl),
            fill = factor(cyl)))+
 geom_bar()+
-*theme_stat()+
+*theme_stat()
 ```
 
 &lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
@@ -73,7 +92,7 @@ class: inverse, center, middle
 
 # package statRmd
 
-## &lt;br&gt;Create PDF Documents with RMarkdown according to CD Guidelines
+## &lt;br&gt;RMarkdown pdf templates
 
 ---
 
@@ -81,6 +100,9 @@ class: left, top
 
 
 # Our Analytical Publications
+
+- Periodic Reports -&gt; highly automated
+- Analytical studies -&gt; custom made
 
 .center[
 .pull-left[
@@ -98,6 +120,7 @@ class: left, top
 
 - Periodic reports]
 ]]
+
 
 ---
 
@@ -247,6 +270,14 @@ File &gt; New File &gt; R Markdown &gt; From Template
 
 ![](libs/RMarkdown_Templates.PNG)
 
+
+---
+
+# Drawbacks
+
+- Proofreading: how?
+- PDF only: No word file available for comments
+- 
 ---
 
 
@@ -256,7 +287,6 @@ File &gt; New File &gt; R Markdown &gt; From Template
 
 - Tutorial from Chester Ismay  
 [Creating a basic template package in R](http://ismayc.github.io/ecots2k16/template_pkg/) 
-
 
 
 ---

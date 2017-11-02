@@ -50,9 +50,11 @@ a, a > code {
   padding: 50px;
   line-height: 1.25em;
   font-size: 18pt;
+  text-decoration: none;
 }
  
-
+.large { font-size: 130% }
+.small { font-size: 70% }
 
 
 .remark-slide-content > h1:first-of-type {
@@ -81,7 +83,8 @@ a, a > code {
 .inverse {
   background-color: #009ee0;
   color: white;
-  text-shadow: 0 0 10px #333;
+  /*text-shadow: 0 0 10px #333;*/
+  text-decoration: none;
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
@@ -95,7 +98,7 @@ a, a > code {
 .title-slide {
   background-image: url("sticker-01.png");
   background-position: top right;
-  background-size: 40%;
+  background-size: 30%;
   background-color: white;
   color: #009ee0;
   
