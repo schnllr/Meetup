@@ -38,12 +38,17 @@ class: inverse, left, middle
 ---
 
 
-class: inverse, center, middle
+class: inverse, center, bottom
+
+
 
 # theme_stat()
 
 ## <br>a theme for ggplot2 graphics
 
+<br>
+.right[
+<IMG SRC="http://hexb.in/hexagons/ggplot2.png" width = "150" height = auto>]
 
 
 ---
@@ -307,10 +312,18 @@ File > New File > R Markdown > From Template
 
 # Resources
 
-- _Google is you Friend_
+
+- RMarkdown from RStudio  
+[Document Templates](http://rmarkdown.rstudio.com/developer_document_templates)
 
 - Tutorial from Chester Ismay  
 [Creating a basic template package in R](http://ismayc.github.io/ecots2k16/template_pkg/) 
+
+- RStudio Blog  
+[RMarkdown Custom Formats](https://blog.rstudio.com/2016/03/21/r-markdown-custom-formats/)
+
+- [Google is your friend](http://lmgtfy.com/)
+
 
 
 ---
