@@ -165,12 +165,12 @@ statR::statXLSX(data,"name of the table", worksheets)
 +visual coherence
 
 ---
-background-image: url(libs/5.png)
+background-image: url("libs/5.png")
 background-size: contain
 class: center, bottom
 
 ---
-background-image: url(libs/6.png)
+background-image: url("libs/6.png")
 background-size: contain
 class: center, bottom
 
