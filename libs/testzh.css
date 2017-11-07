@@ -63,9 +63,8 @@ a, a > code {
 
 .remark-slide-number {
     font-size: 10pt;
-  color: #009ee0; /* white */
-  opacity: 1; /* default: 0.5 */
-}
+  color: #009ee0; 
+  opacity: 0;  } 
 
 
 .footnote {

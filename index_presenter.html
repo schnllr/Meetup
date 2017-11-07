@@ -20,6 +20,11 @@ class: center, middle, inverse, title-slide
 class: inverse, center, middle
 
 # The state of corporate design @ STAT ZH
+
+???
+
+In this presentation by 'mastering CD' we do not mean perfectly layout and format everything and investing a lot of resources in it. It is about achieving visual coherence of different forms of publications by letting R do the job for you. We will present the functions &amp; templates we have programmed in R that users will not use for the sake of complying with CD at any cost but for CONVENIENCE.
+
 ---
 class: middle, left
 
@@ -36,6 +41,12 @@ class: middle, left
 --
 
 - &lt;b&gt;'Do it yourself' Corporate Design Toolbox&lt;/b&gt;
+
+
+???
+
+The generic CD Guidelines provide a plenty of freedoms when it comes to design  - especially to units that publish data-products. We at the statistical Office have no centralized publishing. We are a group of self-publishers that produce infographics, Excel-tables and pdf-publications. So given this situation, how do we achieve a high degree of visual unifomirty? We are building a Corporate Desing Toolbox for this purpouse.
+
 
 ---
 class: middle, left
@@ -58,7 +69,11 @@ class: inverse, center, middle
 class: center, middle
 
 Not the ideal &lt;font color=#009ee0&gt;color-palette&lt;/font&gt; for graphs.
-![](index_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+![](index_presenter_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+
+
+???
+The official cantonal CD-colors were made for other purpouses than data-visualization - mainly for the use in print publications produced with office products. Which explains why the palette is like it is.
 
 ---
 ### How we created our own color-scheme
@@ -75,10 +90,14 @@ Not the ideal &lt;font color=#009ee0&gt;color-palette&lt;/font&gt; for graphs.
 
 **Colorblind-Testing** → Dichromat-package
 
+???
+
+Everyone was using his own palettes (mainly color brewer) - no consistence! So we decided to develop our own color scheme. Here you can see the steps of the color-sheme developemnt. We took the cd-colors, reorderer and muted them. Of course, we've adapted the colorspace to LAB instead of RGB. LAB is a color space that is optimized for the human eye better percevieng the different hues. Then i wrote a function on top of the colorRampPalette-Function that you can feed with a palette and it produces differently saturated (lighter and darker) versions of it, in equal steps. The result is a color matrix which you can see on the next slide. 
+
 ---
 class: center,middle
 
-![](index_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+![](index_presenter_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -95,7 +114,7 @@ p +theme_stat() +
   scale_fill_manual(values=zhpal$zhdiagonal)
 ```
 
-![](index_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+![](index_presenter_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
@@ -107,8 +126,14 @@ p +theme_stat() +
   scale_fill_manual(values=dichromat(zhpal$zhdiagonal,type=c("tritan")))
 ```
 
-![](index_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+![](index_presenter_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
 ]
+
+???
+If you should ever create your own palette you will have it tested for colorblindness.
+The dichromat package is a great resource. You can see an example here.
+
+As i said before, there is no strict obligation to use these colours-palettes for everything. thats also why its not like everyone is complying today, some people are still using their 'old' palettes. I call them the 'color-resistance'. and no i will not make names here. But by creating this color-scheme we have still reached the goal of achieving a high homogenity of how our charts look like - just by providing functions that are convenient to use.
 
 
 ---
@@ -116,10 +141,19 @@ background-image: url(libs/darthvader.jpg)
 background-position: 50% 50%
 class: center, bottom, inverse
 
+???
+
+The persuasion of the force of convenience will get more and more people to use our color scheme.
+
 ---
 class: inverse, center, middle
 
 # Producing already formated XLSX-tables with R
+
+
+???
+
+I would never have imagined to give a presentation related to EXCEL. But here i am. I hope we will survive this toghether even if i will pronounce the E-word several times.
 
 ---
 background-image: url(libs/turtles.gif)
@@ -134,11 +168,22 @@ No strict guidelines on how XLSX files should look like
 
 .footnote[[&lt;font color=#FFFFFF&gt;Gif: Hoguemr, reddit&lt;font&gt;](https://www.reddit.com/r/funny/comments/1gzksk/work_was_a_little_slow_for_me_this_morning_again/)]
 
+???
+
+The majority of our customers relies on Excel as a tool for data analysis. Thats why we have 100+ excel Tables on our website. We perform customer specific queries on a daily basis and deliver the data in Excel-tables. However there is a problem with this - for a long time, there haven't been any strict guidelines on how our XLSX Files should look like.
+
+Even if you can do crazy stuff in Excel - i mean look at thisgif that i found on reddit, personally speaking, i see Exceltables as a mere Endproduct. I prefer not doing anykind of datamanipulation or extensive formatting in Excel. In order to keep everything reproducible i prefer getting straight out of R Excel files. Thats what motivated the creation of the Excel-functions. 
+
+Be warned the next slide -&gt; headache. How diverse our excels looked like (and to some degree still do)
+
 ---
 background-image: url(libs/excel.gif)
 background-size: contain
 class: center, bottom
 
+???
+
+In sake of uniformity and reproducability we are trying to improve this situation. Getting ones hands dirty and manually formating excel-files or even doing the last steps of data-manipulation in Excel is an error-prone task. Thats why i set up r-functions that allow for generating the final output without ever leaving R. This ensures reproducibility.
 ---
 
 #statXLSX
@@ -158,6 +203,11 @@ statR::statXLSX(data,"name of the table", worksheets)
 +quality assurance, less error prone
 
 +visual coherence
+
+???
+The amount of time i spend with formatting excel-tables at work is directly correlated with job-dissatisfaction. i love my job. And to assure that this stays as it is i wrote these functions. There are several packages that allow to create xlsx files. I choose to build the functions on top of the openxlsx package. openxlsx does not dependend on Java, which has caused me trouble when using other excel-packages. 
+
+We are planing to automatize the Excel-production and the functions will come into play in this process. 
 
 ---
 background-image: url(libs/5.png)
@@ -199,7 +249,7 @@ ggplot(mtcars,
 geom_bar()
 ```
 &lt;br&gt;
-&lt;img src="index_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_presenter_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -215,8 +265,12 @@ geom_bar()+
 *theme_stat()
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_presenter_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
 ]
+
+
+???
+we specify font, default colors many arguments within theme, such as  axes (lines, breaks, ticks), panel,grid, legend.position, background-color
 
 ---
 
@@ -318,6 +372,10 @@ class: left, top
 &lt;IMG SRC="https://i.stack.imgur.com/zHFFO.png" width = auto height = "150"&gt;]
 
 
+
+
+???
+set up a RMarkdown file in RStudio render it with some tex-compiler through kniter and get the pdf. How can you custommize your pdf output? -&gt; YAML header
 ---
 
 class: left, top
@@ -356,6 +414,10 @@ output:
 .center[&lt;IMG SRC=libs/titel_statistikinfo.PNG width = "150" height = auto&gt;]
 ]
 
+???
+let's get a bit deeper in the technical details. we see here a yaml header of a random RMarkdown file. In the yaml header you define your output type, pdf, html, word, whatever. according to the output section this file is going to produce a PDF document. furthermore, we have specified a latex_engine xelatex (necessary for arial fonts) and a cairo_pdf device for the graphics output. probably, we wish to make further adjustments to the output. we have (at least) 2 ways of making further customizations
+
+
 
 ---
 
@@ -387,6 +449,12 @@ pdf_document:
 ```
 
 
+???
+Probably you may want do make adjustments to the default .tex layout. like font, colors, title page etc. 2 ways of doing this: 
+- in the header-includes: you can do the tex-adjustments, loading packages, define colors etc.
+- you create you own my_template.tex and overwrite rmarkdowns default .tex file 
+
+
 ---
 
 class: left, top
@@ -416,6 +484,14 @@ class: left, top
 
 - Some helper functions
 
+
+???
+as for every R project, there are many good reasons why to build a package. 
+-it helps you keep your code organized. compared to having different code snippets and functions in project-specific folders
+-it helps you document your codes in a way that your co-workers and your future-you will still understand you reasoning
+-sharing a package comes more handy than sharing different functions and code snippets based on different package versions
+- you can create doucment templates. for this specific case this is an excellent reason to build  package
+along with the templates we provide some helpfer functions, to nicely align the graphics output in the document or to nicely wrap plot titles 
 ---
 
 class: left, top
