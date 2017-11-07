@@ -444,6 +444,8 @@ class: left, top
 
 - Templates
 
+--
+
 ### Content
 .pull-left[
 ```{r, eval = T, echo = T, tidy=T, tidy.opts=list(blank=FALSE, width.cutoff=30)}

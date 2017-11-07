@@ -351,7 +351,7 @@ class: left, top
 - single-authored projects
 - text-intensive
 
-.center[<IMG SRC=libs/info.gif width = "150" height = auto>]
+.center[<IMG SRC=libs/info.gif width = "180" height = auto>]
 
 
 ]
@@ -363,7 +363,7 @@ class: left, top
 - «reproducible»
 - mainly charts and tables
 
-.center[<IMG SRC=libs/report.gif width = "150" height = auto>]
+.center[<IMG SRC=libs/report.gif width = "180" height = auto>]
 ]
 
 
@@ -511,6 +511,8 @@ class: left, top
 <!-- <IMG SRC="http://hexb.in/hexagons/devtools.png" width = "100" height = auto><IMG SRC="http://hexb.in/hexagons/roxygen2.png" width = "100" height = auto>] -->
 
 - Templates
+
+--
 
 ### Content
 .pull-left[
