@@ -45,12 +45,12 @@ class: middle, left
 
 - Theme for ggplot2 graphics <font color=#009ee0>theme_stat</font>
 
-- Reports & pdf <font color=#009ee0>statRmd</font>
+- Reports & pdf documents <font color=#009ee0>statRmd</font>
 
 ---
 class: inverse, center, middle
 
-# ZH Colour Palette
+# ZH Color Palette
 ---
 class: center, middle
 
@@ -294,19 +294,25 @@ class: left, top
 
 
 .pull-left[
-**Analytical studies**
+[<b> statistik.info</b>](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/themen/statistikinfo.html)
 - custom made
 - stand-alone 
 - single-authored projects
+- text-intensive
+
+.center[<IMG SRC=libs/info.gif width = "150" height = auto>]
+
 
 ]
 
 .pull-right[
-**Periodic reports**
+<font color=#009ee0><b>Periodic reports</b></font>
 - highly automated
 - parameterized
 - «reproducible»
+- mainly charts and tables
 
+.center[<IMG SRC=libs/report.gif width = "150" height = auto>]
 ]
 
 
@@ -380,7 +386,7 @@ output:
 title: "Haupttitel"
 author: "Vorname Nachname"
 output:
-*  statRmd::stat_report:
+*  statRmd::stat_report
 ---
 ```
 .center[<IMG SRC=libs/titel_statistikinfo.PNG width = "150" height = auto>]
@@ -391,7 +397,7 @@ output:
 
 class: left, top
 
-# stat_report()
+# statRmd::stat_report
 
 ### Under the hood
 
@@ -439,11 +445,20 @@ class: left, top
 - Templates
 
 ### Content
+.pull-left[
+```{r, eval = T, echo = T, tidy=T, tidy.opts=list(blank=FALSE, width.cutoff=30)}
+library(statRmd)
+
+ls("package:statRmd")
+```
+]
+
+.pull-right[
 
 - RMarkdown Templates
 
 - Some helper functions
-
+]
 ---
 
 class: left, top
@@ -469,14 +484,14 @@ background-size:30%
 # Keep in touch
 
 <br>
-This presentation  
-[RMeetup: Mastering Corporate Design with R](https://schnllr.github.io/Meetup/)  
 
-All slides  
+Slides  
 https://statistikzh.github.io/RMeetup/
 
-[https://statistik.zh.ch](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/aktuell/mitteilungen/2017/jobs2017.html)
+Website  
+https://statistik.zh.ch
 
+Twitter  
 <a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">@statistik_zh</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 

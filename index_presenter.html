@@ -132,18 +132,15 @@ p +theme_stat() +
 ???
 If you should ever create your own palette you will have it tested for colorblindness.
 The dichromat package is a great resource. You can see an example here.
-
-As i said before, there is no strict obligation to use these colours-palettes for everything. thats also why its not like everyone is complying today, some people are still using their 'old' palettes. I call them the 'color-resistance'. and no i will not make names here. But by creating this color-scheme we have still reached the goal of achieving a high homogenity of how our charts look like - just by providing functions that are convenient to use.
-
-
 ---
 background-image: url(libs/darthvader.jpg)
 background-position: 50% 50%
 class: center, bottom, inverse
 
 ???
+As i said before, there is no strict obligation to use these colours-palettes for everything. thats also why its not like everyone is complying today, some people are still using their 'old' palettes. I call them the 'color-resistance'. and no i will not make names here. But by creating this color-scheme we have still reached the goal of achieving a high homogenity of how our charts look like - just by providing functions that are convenient to use.
 
-The persuasion of the force of convenience will get more and more people to use our color scheme.
+I believe in the persuasion of the force of convenience will get more and more people to use our color scheme.
 
 ---
 class: inverse, center, middle
@@ -316,20 +313,27 @@ class: left, top
 
 
 .pull-left[
-**Analytical studies**
+[&lt;b&gt; statistik.info&lt;/b&gt;](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/themen/statistikinfo.html)
 - custom made
 - stand-alone 
 - single-authored projects
+- text-intensive
+
+.center[&lt;IMG SRC=libs/info.gif width = "150" height = auto&gt;]
+
 
 ]
 
 .pull-right[
-**Periodic reports**
+&lt;font color=#009ee0&gt;&lt;b&gt;Periodic reports&lt;/b&gt;&lt;/font&gt;
 - highly automated
 - parameterized
 - «reproducible»
+- mainly charts and tables
 
+.center[&lt;IMG SRC=libs/report.gif width = "150" height = auto&gt;]
 ]
+
 
 
 ---
@@ -357,6 +361,8 @@ Establish an analysis and publication process, that is
 
 .large[&lt;font color=#009ee0&gt;➡ RMarkdown&lt;/font&gt;]
 
+???
+Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name
 ---
 
 
@@ -408,7 +414,7 @@ output:
 title: "Haupttitel"
 author: "Vorname Nachname"
 output:
-*  statRmd::stat_report:
+*  statRmd::stat_report
 ---
 ```
 .center[&lt;IMG SRC=libs/titel_statistikinfo.PNG width = "150" height = auto&gt;]
@@ -479,10 +485,24 @@ class: left, top
 - Templates
 
 ### Content
+.pull-left[
+
+```r
+library(statRmd)
+ls("package:statRmd")
+```
+
+```
+## [1] "flush_plot"  "stat_report" "swr"
+```
+]
+
+.pull-right[
 
 - RMarkdown Templates
 
 - Some helper functions
+]
 
 
 ???
@@ -517,14 +537,14 @@ background-size:30%
 # Keep in touch
 
 &lt;br&gt;
-This presentation  
-[RMeetup: Mastering Corporate Design with R](https://schnllr.github.io/Meetup/)  
 
-All slides  
+Slides  
 https://statistikzh.github.io/RMeetup/
 
-[https://statistik.zh.ch](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/aktuell/mitteilungen/2017/jobs2017.html)
+Website  
+https://statistik.zh.ch
 
+Twitter  
 &lt;a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"&gt;@statistik_zh&lt;/a&gt;&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
 

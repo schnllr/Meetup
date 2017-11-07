@@ -48,12 +48,12 @@ class: middle, left
 
 - Theme for ggplot2 graphics &lt;font color=#009ee0&gt;theme_stat&lt;/font&gt;
 
-- Reports &amp; pdf &lt;font color=#009ee0&gt;statRmd&lt;/font&gt;
+- Reports &amp; pdf documents &lt;font color=#009ee0&gt;statRmd&lt;/font&gt;
 
 ---
 class: inverse, center, middle
 
-# ZH Colour Palette
+# ZH Color Palette
 ---
 class: center, middle
 
@@ -262,19 +262,25 @@ class: left, top
 
 
 .pull-left[
-**Analytical studies**
+[&lt;b&gt; statistik.info&lt;/b&gt;](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/themen/statistikinfo.html)
 - custom made
 - stand-alone 
 - single-authored projects
+- text-intensive
+
+.center[&lt;IMG SRC=libs/info.gif width = "150" height = auto&gt;]
+
 
 ]
 
 .pull-right[
-**Periodic reports**
+&lt;font color=#009ee0&gt;&lt;b&gt;Periodic reports&lt;/b&gt;&lt;/font&gt;
 - highly automated
 - parameterized
 - «reproducible»
+- mainly charts and tables
 
+.center[&lt;IMG SRC=libs/report.gif width = "150" height = auto&gt;]
 ]
 
 
@@ -350,7 +356,7 @@ output:
 title: "Haupttitel"
 author: "Vorname Nachname"
 output:
-*  statRmd::stat_report:
+*  statRmd::stat_report
 ---
 ```
 .center[&lt;IMG SRC=libs/titel_statistikinfo.PNG width = "150" height = auto&gt;]
@@ -361,7 +367,7 @@ output:
 
 class: left, top
 
-# stat_report()
+# statRmd::stat_report
 
 ### Under the hood
 
@@ -411,11 +417,24 @@ class: left, top
 - Templates
 
 ### Content
+.pull-left[
+
+```r
+library(statRmd)
+ls("package:statRmd")
+```
+
+```
+## [1] "flush_plot"  "stat_report" "swr"
+```
+]
+
+.pull-right[
 
 - RMarkdown Templates
 
 - Some helper functions
-
+]
 ---
 
 class: left, top
@@ -441,14 +460,14 @@ background-size:30%
 # Keep in touch
 
 &lt;br&gt;
-This presentation  
-[RMeetup: Mastering Corporate Design with R](https://schnllr.github.io/Meetup/)  
 
-All slides  
+Slides  
 https://statistikzh.github.io/RMeetup/
 
-[https://statistik.zh.ch](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/aktuell/mitteilungen/2017/jobs2017.html)
+Website  
+https://statistik.zh.ch
 
+Twitter  
 &lt;a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"&gt;@statistik_zh&lt;/a&gt;&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
 
