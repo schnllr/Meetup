@@ -251,37 +251,18 @@ labs(y = NULL, x = NULL)
 ```
 ]
 
----
-
-# theme_stat()
-### Under the hood
-
-
-```{r, eval = F, echo = T, tidy=TRUE}
-theme_stat <- function(base_size = 11){
-  theme_minimal(base_size = base_size) +
-# GENERAL
-  theme(legend.key = element_blank(),
-*       strip.background = element_blank(),
-*       legend.position = "bottom") +
-# AXIS
-	theme(axis.title.x = element_text(color=color.axis, vjust= 0),
-	      axis.title.y = element_text(color=color.axis, vjust= 1.25),
-*        axis.line.y = element_blank(),
-	      axis.ticks.y = element_blank()) +
-# GRID LINES
-*	theme(panel.grid.major.x = element_blank(), 
-*       panel.grid.minor.x = element_blank())}
-```
-
 
 ---
 
-class: inverse, center, middle
+class: inverse, center, bottom
 
 # statRmd
 
 ## <br>RMarkdown pdf templates
+
+<br>
+.right[
+<IMG SRC="http://hexb.in/hexagons/rstudio.png" width = "150" height = auto><IMG SRC="http://hexb.in/hexagons/rmarkdown.png" width = "150" height = auto><IMG SRC="http://hexb.in/hexagons/knitr.png" width = "150" height = auto>]
 
 ---
 
@@ -341,19 +322,6 @@ Establish an analysis and publication process, that is
 
 .large[<font color=#009ee0>➡ RMarkdown</font>]
 
----
-
-
-class: left, top
-
-# Tools
-
-### «Standing on the shoulders of giants»
-
-<br>
-.center[
-<IMG SRC="http://hexb.in/hexagons/rstudio.png" width = "150" height = auto><IMG SRC="http://hexb.in/hexagons/rmarkdown.png" width = "150" height = auto><IMG SRC="http://hexb.in/hexagons/knitr.png" width = "150" height = auto>
-<IMG SRC="https://i.stack.imgur.com/zHFFO.png" width = auto height = "150">]
 
 
 ---
@@ -393,33 +361,6 @@ output:
 ]
 
 
----
-
-class: left, top
-
-# statRmd::stat_report
-
-### Under the hood
-
-**within YAML: header-includes**
-```{r, eval = F, echo = T, tidy=T, tidy.opts=list(blank=FALSE, width.cutoff=30)}
----
-header-includes:
-  \usepackage{xcolor}
-* \definecolor{zhblue}{RGB}{0,158,224}
-  \usepackage{fontspec}
-* \setmainfont[BoldFont = {Arial Black}]{Arial}
----
-```
---
-**stat_template.tex**
-```{r, eval = F, echo = T, tidy=T, tidy.opts=list(blank=FALSE, width.cutoff=30)}
----
-pdf_document:
-*template: stat_template.tex
----
-```
-
 
 ---
 
@@ -447,20 +388,12 @@ class: left, top
 --
 
 ### Content
-.pull-left[
-```{r, eval = T, echo = T, tidy=T, tidy.opts=list(blank=FALSE, width.cutoff=30)}
-library(statRmd)
 
-ls("package:statRmd")
-```
-]
-
-.pull-right[
 
 - RMarkdown Templates
 
 - Some helper functions
-]
+
 ---
 
 class: left, top

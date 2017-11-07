@@ -23,7 +23,7 @@ class: inverse, center, middle
 
 ???
 
-In this presentation by 'mastering CD' we do not mean perfectly layout and format everything and investing a lot of resources in it. It is about achieving visual coherence of different forms of publications by letting R do the job for you. We will present the functions &amp; templates we have programmed in R that users will not use for the sake of complying with CD at any cost but for CONVENIENCE.
+This presentation is about 'mastering CD'. However by mastering CD we do not mean perfectly layout and format everything and investing a lot of resources to do so. It is about achieving visual consistence of different forms of publications by letting R do the job for you. We will present the functions &amp; templates we have programmed in R that users will not use for the sake of complying with CD at any cost but for CONVENIENCE.
 
 ---
 class: middle, left
@@ -59,7 +59,7 @@ class: middle, left
 
 - Theme for ggplot2 graphics &lt;font color=#009ee0&gt;theme_stat&lt;/font&gt;
 
-- Reports &amp; pdf &lt;font color=#009ee0&gt;statRmd&lt;/font&gt;
+- Reports &amp; pdf documents &lt;font color=#009ee0&gt;statRmd&lt;/font&gt;
 
 ---
 class: inverse, center, middle
@@ -138,9 +138,7 @@ background-position: 50% 50%
 class: center, bottom, inverse
 
 ???
-As i said before, there is no strict obligation to use these colours-palettes for everything. thats also why its not like everyone is complying today, some people are still using their 'old' palettes. I call them the 'color-resistance'. and no i will not make names here. But by creating this color-scheme we have still reached the goal of achieving a high homogenity of how our charts look like - just by providing functions that are convenient to use.
-
-I believe in the persuasion of the force of convenience will get more and more people to use our color scheme.
+So let me draw a short conclusion. There is no strict obligation to use these colours-palettes for everything. However, i believe in the persuasion of the force of convenience will get more and more people to use our color scheme and finally make all our charts look alike.
 
 ---
 class: inverse, center, middle
@@ -150,7 +148,7 @@ class: inverse, center, middle
 
 ???
 
-I would never have imagined to give a presentation related to EXCEL. But here i am. I hope we will survive this toghether even if i will pronounce the E-word several times.
+I would never have imagined to give a presentation related to EXCEL at an R-meetup. But here i am. I will try to make it short. We're in this toghether and will survive it for sure. Just think about the Apero.
 
 ---
 background-image: url(libs/turtles.gif)
@@ -169,7 +167,9 @@ No strict guidelines on how XLSX files should look like
 
 The majority of our customers relies on Excel as a tool for data analysis. Thats why we have 100+ excel Tables on our website. We perform customer specific queries on a daily basis and deliver the data in Excel-tables. However there is a problem with this - for a long time, there haven't been any strict guidelines on how our XLSX Files should look like.
 
-Even if you can do crazy stuff in Excel - i mean look at thisgif that i found on reddit, personally speaking, i see Exceltables as a mere Endproduct. I prefer not doing anykind of datamanipulation or extensive formatting in Excel. In order to keep everything reproducible i prefer getting straight out of R Excel files. Thats what motivated the creation of the Excel-functions. 
+Even if you can do crazy stuff in Excel - i mean look at thisgif that i found on reddit. In our opinion, Exceltables should be seen as a mere Endproduct. We prefer not doing anykind of datamanipulation or extensive formatting in Excel. TO ensure reproducibility  
+
+personally speaking, i see Exceltables as a mere Endproduct. I prefer not doing anykind of datamanipulation or extensive formatting in Excel. In order to keep everything reproducible i prefer getting straight out of R Excel files. Thats what motivated the creation of the Excel-functions. 
 
 Be warned the next slide -&gt; headache. How diverse our excels looked like (and to some degree still do)
 
@@ -271,37 +271,15 @@ we specify font, default colors many arguments within theme, such as  axes (line
 
 ---
 
-# theme_stat()
-### Under the hood
-
-
-
-```r
-theme_stat &lt;- function(base_size = 11){
-  theme_minimal(base_size = base_size) +
-# GENERAL
-  theme(legend.key = element_blank(),
-*       strip.background = element_blank(),
-*       legend.position = "bottom") +
-# AXIS
-	theme(axis.title.x = element_text(color=color.axis, vjust= 0),
-	      axis.title.y = element_text(color=color.axis, vjust= 1.25),
-*        axis.line.y = element_blank(),
-	      axis.ticks.y = element_blank()) +
-# GRID LINES
-*	theme(panel.grid.major.x = element_blank(), 
-*       panel.grid.minor.x = element_blank())}
-```
-
-
----
-
-class: inverse, center, middle
+class: inverse, center, bottom
 
 # statRmd
 
 ## &lt;br&gt;RMarkdown pdf templates
 
+&lt;br&gt;
+.right[
+&lt;IMG SRC="http://hexb.in/hexagons/rstudio.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/rmarkdown.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/knitr.png" width = "150" height = auto&gt;]
 ---
 
 class: left, top
@@ -362,27 +340,11 @@ Establish an analysis and publication process, that is
 .large[&lt;font color=#009ee0&gt;➡ RMarkdown&lt;/font&gt;]
 
 ???
-Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name
+Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name.set up a RMarkdown file in RStudio render it with some tex-compiler through kniter and get the pdf. How can you custommize your pdf output? -&gt; YAML header
 ---
 
 
-class: left, top
 
-# Tools
-
-### «Standing on the shoulders of giants»
-
-&lt;br&gt;
-.center[
-&lt;IMG SRC="http://hexb.in/hexagons/rstudio.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/rmarkdown.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/knitr.png" width = "150" height = auto&gt;
-&lt;IMG SRC="https://i.stack.imgur.com/zHFFO.png" width = auto height = "150"&gt;]
-
-
-
-
-???
-set up a RMarkdown file in RStudio render it with some tex-compiler through kniter and get the pdf. How can you custommize your pdf output? -&gt; YAML header
----
 
 class: left, top
 
@@ -421,42 +383,7 @@ output:
 ]
 
 ???
-let's get a bit deeper in the technical details. we see here a yaml header of a random RMarkdown file. In the yaml header you define your output type, pdf, html, word, whatever. according to the output section this file is going to produce a PDF document. furthermore, we have specified a latex_engine xelatex (necessary for arial fonts) and a cairo_pdf device for the graphics output. probably, we wish to make further adjustments to the output. we have (at least) 2 ways of making further customizations
-
-
-
----
-
-class: left, top
-
-# stat_report()
-
-### Under the hood
-
-**within YAML: header-includes**
-
-```r
----
-header-includes:
-  \usepackage{xcolor}
-* \definecolor{zhblue}{RGB}{0,158,224}
-  \usepackage{fontspec}
-* \setmainfont[BoldFont = {Arial Black}]{Arial}
----
-```
---
-**stat_template.tex**
-
-```r
----
-pdf_document:
-*template: stat_template.tex
----
-```
-
-
-???
-Probably you may want do make adjustments to the default .tex layout. like font, colors, title page etc. 2 ways of doing this: 
+let's get a bit deeper in the technical details. we see here a yaml header of a random RMarkdown file. In the yaml header you define your output type, pdf, html, word, whatever. according to the output section this file is going to produce a PDF document. furthermore, we have specified a latex_engine xelatex (necessary for arial fonts) and a cairo_pdf device for the graphics output. probably, we wish to make further adjustments to the output. we have (at least) 2 ways of making further customizations. Probably you may want do make adjustments to the default .tex layout. like font, colors, title page etc. 2 ways of doing this: 
 - in the header-includes: you can do the tex-adjustments, loading packages, define colors etc.
 - you create you own my_template.tex and overwrite rmarkdowns default .tex file 
 
@@ -487,24 +414,11 @@ class: left, top
 --
 
 ### Content
-.pull-left[
 
-```r
-library(statRmd)
-ls("package:statRmd")
-```
-
-```
-## [1] "flush_plot"  "stat_report" "swr"
-```
-]
-
-.pull-right[
 
 - RMarkdown Templates
 
 - Some helper functions
-]
 
 
 ???

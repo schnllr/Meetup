@@ -218,38 +218,18 @@ geom_bar()+
 &lt;img src="index_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
----
-
-# theme_stat()
-### Under the hood
-
-
-
-```r
-theme_stat &lt;- function(base_size = 11){
-  theme_minimal(base_size = base_size) +
-# GENERAL
-  theme(legend.key = element_blank(),
-*       strip.background = element_blank(),
-*       legend.position = "bottom") +
-# AXIS
-	theme(axis.title.x = element_text(color=color.axis, vjust= 0),
-	      axis.title.y = element_text(color=color.axis, vjust= 1.25),
-*        axis.line.y = element_blank(),
-	      axis.ticks.y = element_blank()) +
-# GRID LINES
-*	theme(panel.grid.major.x = element_blank(), 
-*       panel.grid.minor.x = element_blank())}
-```
-
 
 ---
 
-class: inverse, center, middle
+class: inverse, center, bottom
 
 # statRmd
 
 ## &lt;br&gt;RMarkdown pdf templates
+
+&lt;br&gt;
+.right[
+&lt;IMG SRC="http://hexb.in/hexagons/rstudio.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/rmarkdown.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/knitr.png" width = "150" height = auto&gt;]
 
 ---
 
@@ -309,19 +289,6 @@ Establish an analysis and publication process, that is
 
 .large[&lt;font color=#009ee0&gt;➡ RMarkdown&lt;/font&gt;]
 
----
-
-
-class: left, top
-
-# Tools
-
-### «Standing on the shoulders of giants»
-
-&lt;br&gt;
-.center[
-&lt;IMG SRC="http://hexb.in/hexagons/rstudio.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/rmarkdown.png" width = "150" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/knitr.png" width = "150" height = auto&gt;
-&lt;IMG SRC="https://i.stack.imgur.com/zHFFO.png" width = auto height = "150"&gt;]
 
 
 ---
@@ -363,35 +330,6 @@ output:
 ]
 
 
----
-
-class: left, top
-
-# statRmd::stat_report
-
-### Under the hood
-
-**within YAML: header-includes**
-
-```r
----
-header-includes:
-  \usepackage{xcolor}
-* \definecolor{zhblue}{RGB}{0,158,224}
-  \usepackage{fontspec}
-* \setmainfont[BoldFont = {Arial Black}]{Arial}
----
-```
---
-**stat_template.tex**
-
-```r
----
-pdf_document:
-*template: stat_template.tex
----
-```
-
 
 ---
 
@@ -419,24 +357,12 @@ class: left, top
 --
 
 ### Content
-.pull-left[
 
-```r
-library(statRmd)
-ls("package:statRmd")
-```
-
-```
-## [1] "flush_plot"  "stat_report" "swr"
-```
-]
-
-.pull-right[
 
 - RMarkdown Templates
 
 - Some helper functions
-]
+
 ---
 
 class: left, top
